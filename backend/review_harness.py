@@ -216,8 +216,8 @@ class GitIntegration:
 
 class ReviewAgent:
     PATTERNS = [
-        # Security: eval/exec
-        (r'eval\s*\(|exec\s*\(', 'critical', 'security',
+        # Security: eval/exec (but not create_subprocess_exec, etc.)
+        (r'(?<!\w)eval\s*\(|(?<!\w)exec\s*\(', 'critical', 'security',
          'Dangerous code execution (eval/exec)',
          'Use ast.literal_eval, json.loads, or a proper parser'),
         # Security: hardcoded secrets
@@ -324,6 +324,9 @@ class AutoFixer:
         (r'(\s*)print\s*\((.+?)\)\s*$', r'\1logger.info(\2)', 'print → logger.info'),
         # except Exception: → except Exception:
         (r'(\s*)except\s*:', r'\1except Exception:', 'Bare except → Exception'),
+        # import * → specific imports (flag only, can't auto-fix safely)
+        # TODO/FIXME comments → add tracking
+        (r'(\s*)#\s*(TODO|FIXME|HACK|XXX)\s*:\s*(.+)$', r'\1# [\2] \3 — tracked in review harness', 'TODO/FIXME tagged'),
     ]
 
     def apply(self, file_path: str, findings: list[ReviewFinding]) -> list[str]:
