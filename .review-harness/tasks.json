@@ -211763,5 +211763,2302 @@
       "errors": ""
     },
     "error": null
+  },
+  "20dde9d9": {
+    "id": "20dde9d9",
+    "file_path": "backend/agent_orchestrator.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:25.833909",
+    "completed_at": "2026-05-16T10:19:30.681273",
+    "result": {
+      "findings": [
+        {
+          "line": 145,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Function is 156 lines \u2014 consider splitting",
+          "suggestion": "Extract into smaller focused functions",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/agent_orchestrator.py"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "ee5a4b84": {
+    "id": "ee5a4b84",
+    "file_path": "backend/agent_orchestrator.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:25.883247",
+    "completed_at": "2026-05-16T10:19:32.997480",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "32dba954": {
+    "id": "32dba954",
+    "file_path": "backend/agent_orchestrator.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:25.931435",
+    "completed_at": "2026-05-16T10:19:35.377348",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 303 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 2"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "a4d619bb": {
+    "id": "a4d619bb",
+    "file_path": "backend/agent_orchestrator.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:25.984032",
+    "completed_at": "2026-05-16T10:19:37.725100",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "25b9456d": {
+    "id": "25b9456d",
+    "file_path": "backend/archon_integration.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:26.030573",
+    "completed_at": "2026-05-16T10:19:30.769961",
+    "result": {
+      "findings": [
+        {
+          "line": 10,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Function is 82 lines \u2014 consider splitting",
+          "suggestion": "Extract into smaller focused functions",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/archon_integration.py"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "845752e8": {
+    "id": "845752e8",
+    "file_path": "backend/archon_integration.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:26.078414",
+    "completed_at": "2026-05-16T10:19:33.088987",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "de368cbc": {
+    "id": "de368cbc",
+    "file_path": "backend/archon_integration.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:26.125309",
+    "completed_at": "2026-05-16T10:19:35.479122",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 91 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 3"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "4457fbe4": {
+    "id": "4457fbe4",
+    "file_path": "backend/archon_integration.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:26.171957",
+    "completed_at": "2026-05-16T10:19:37.842988",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "e5af66cf": {
+    "id": "e5af66cf",
+    "file_path": "backend/browser_agent.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:26.220449",
+    "completed_at": "2026-05-16T10:19:30.862586",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "b8a59607": {
+    "id": "b8a59607",
+    "file_path": "backend/browser_agent.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:26.271920",
+    "completed_at": "2026-05-16T10:19:33.191697",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "297e6885": {
+    "id": "297e6885",
+    "file_path": "backend/browser_agent.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:26.315648",
+    "completed_at": "2026-05-16T10:19:35.587711",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 105 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 5"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "a8358db2": {
+    "id": "a8358db2",
+    "file_path": "backend/browser_agent.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:26.360878",
+    "completed_at": "2026-05-16T10:19:37.961226",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "5bb1c661": {
+    "id": "5bb1c661",
+    "file_path": "backend/free_gateway.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:26.407479",
+    "completed_at": "2026-05-16T10:19:30.952032",
+    "result": {
+      "findings": [
+        {
+          "line": 31,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Function is 190 lines \u2014 consider splitting",
+          "suggestion": "Extract into smaller focused functions",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/free_gateway.py"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "8c33b607": {
+    "id": "8c33b607",
+    "file_path": "backend/free_gateway.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:26.452391",
+    "completed_at": "2026-05-16T10:19:33.282556",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "a733130d": {
+    "id": "a733130d",
+    "file_path": "backend/free_gateway.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:26.498158",
+    "completed_at": "2026-05-16T10:19:35.678068",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 233 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 2"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Warning: destructive operation without confirmation flow",
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "01f7e91a": {
+    "id": "01f7e91a",
+    "file_path": "backend/free_gateway.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:26.553091",
+    "completed_at": "2026-05-16T10:19:38.083836",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "85c983b6": {
+    "id": "85c983b6",
+    "file_path": "backend/langgraph_engine.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:26.601056",
+    "completed_at": "2026-05-16T10:19:31.039077",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "1853e882": {
+    "id": "1853e882",
+    "file_path": "backend/langgraph_engine.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:26.649030",
+    "completed_at": "2026-05-16T10:19:33.385760",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "419fd84c": {
+    "id": "419fd84c",
+    "file_path": "backend/langgraph_engine.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:26.693708",
+    "completed_at": "2026-05-16T10:19:35.768591",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 187 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 3"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "ff7b8852": {
+    "id": "ff7b8852",
+    "file_path": "backend/langgraph_engine.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:26.739206",
+    "completed_at": "2026-05-16T10:19:38.207949",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "410b902c": {
+    "id": "410b902c",
+    "file_path": "backend/main.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:26.785651",
+    "completed_at": "2026-05-16T10:19:31.138029",
+    "result": {
+      "findings": [
+        {
+          "line": 99,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Function is 295 lines \u2014 consider splitting",
+          "suggestion": "Extract into smaller focused functions",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/main.py"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "053d1184": {
+    "id": "053d1184",
+    "file_path": "backend/main.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:26.835675",
+    "completed_at": "2026-05-16T10:19:33.486080",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "9563a1cc": {
+    "id": "9563a1cc",
+    "file_path": "backend/main.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:26.887203",
+    "completed_at": "2026-05-16T10:19:35.860403",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 393 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 5"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": false,
+        "assertions": 5,
+        "failures": [
+          "Function with multiple params has no defaults \u2014 consider options object"
+        ],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 1 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "af611a03": {
+    "id": "af611a03",
+    "file_path": "backend/main.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:26.938907",
+    "completed_at": "2026-05-16T10:19:38.327301",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "5cc0a7ac": {
+    "id": "5cc0a7ac",
+    "file_path": "backend/review_harness.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:26.985432",
+    "completed_at": "2026-05-16T10:19:31.228093",
+    "result": {
+      "findings": [
+        {
+          "line": 219,
+          "severity": "critical",
+          "category": "security",
+          "message": "Dangerous code execution (eval/exec)",
+          "suggestion": "Use ast.literal_eval, json.loads, or a proper parser",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/review_harness.py"
+        },
+        {
+          "line": 328,
+          "severity": "style",
+          "category": "maintainability",
+          "message": "Technical debt marker",
+          "suggestion": "Address or remove before production",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/review_harness.py"
+        },
+        {
+          "line": 519,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Function is 184 lines \u2014 consider splitting",
+          "suggestion": "Extract into smaller focused functions",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/review_harness.py"
+        },
+        {
+          "line": 1,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Wildcard import \u2014 pollutes namespace",
+          "suggestion": "Import specific names",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "backend/review_harness.py"
+        }
+      ],
+      "count": 4
+    },
+    "error": null
+  },
+  "3959638c": {
+    "id": "3959638c",
+    "file_path": "backend/review_harness.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:27.032790",
+    "completed_at": "2026-05-16T10:19:33.579843",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "265fc04c": {
+    "id": "265fc04c",
+    "file_path": "backend/review_harness.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:27.079870",
+    "completed_at": "2026-05-16T10:19:35.958872",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 702 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 6"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "3d65fffd": {
+    "id": "3d65fffd",
+    "file_path": "backend/review_harness.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:27.127147",
+    "completed_at": "2026-05-16T10:19:38.463132",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "6d05f1ec": {
+    "id": "6d05f1ec",
+    "file_path": "frontend/eslint.config.js",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:27.177949",
+    "completed_at": "2026-05-16T10:19:31.317684",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "bb4c7721": {
+    "id": "bb4c7721",
+    "file_path": "frontend/eslint.config.js",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:27.224568",
+    "completed_at": "2026-05-16T10:19:33.669725",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "fe6e6664": {
+    "id": "fe6e6664",
+    "file_path": "frontend/eslint.config.js",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:27.271850",
+    "completed_at": "2026-05-16T10:19:36.048554",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 24 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "8755a6ab": {
+    "id": "8755a6ab",
+    "file_path": "frontend/eslint.config.js",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:27.321095",
+    "completed_at": "2026-05-16T10:19:38.552383",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "31d17db3": {
+    "id": "31d17db3",
+    "file_path": "frontend/src/App.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:27.369221",
+    "completed_at": "2026-05-16T10:19:31.416438",
+    "result": {
+      "findings": [
+        {
+          "line": 1,
+          "severity": "critical",
+          "category": "bug",
+          "message": "Try block without except \u2014 silent failure",
+          "suggestion": "Add except block or remove try",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "frontend/src/App.tsx"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "8624b517": {
+    "id": "8624b517",
+    "file_path": "frontend/src/App.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:27.418598",
+    "completed_at": "2026-05-16T10:19:33.766926",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "6a461aea": {
+    "id": "6a461aea",
+    "file_path": "frontend/src/App.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:27.476947",
+    "completed_at": "2026-05-16T10:19:36.138691",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": false,
+        "assertions": 7,
+        "failures": [
+          "Collection method without null/undefined guard"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 362 lines, 1 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 1"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "8fe778fa": {
+    "id": "8fe778fa",
+    "file_path": "frontend/src/App.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:27.526860",
+    "completed_at": "2026-05-16T10:19:38.639921",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "5927dbc0": {
+    "id": "5927dbc0",
+    "file_path": "frontend/src/components/AgentVerbosePanel.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:27.574147",
+    "completed_at": "2026-05-16T10:19:31.507455",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "f9c0bbd2": {
+    "id": "f9c0bbd2",
+    "file_path": "frontend/src/components/AgentVerbosePanel.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:27.624711",
+    "completed_at": "2026-05-16T10:19:33.857142",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "76e367d4": {
+    "id": "76e367d4",
+    "file_path": "frontend/src/components/AgentVerbosePanel.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:27.671757",
+    "completed_at": "2026-05-16T10:19:36.235149",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": false,
+        "assertions": 7,
+        "failures": [
+          "Collection method without null/undefined guard"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 219 lines, 1 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 1"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Warning: destructive operation without confirmation flow",
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "d196581f": {
+    "id": "d196581f",
+    "file_path": "frontend/src/components/AgentVerbosePanel.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:27.719407",
+    "completed_at": "2026-05-16T10:19:38.733305",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "66be71e4": {
+    "id": "66be71e4",
+    "file_path": "frontend/src/components/ChatBox.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:27.764953",
+    "completed_at": "2026-05-16T10:19:31.598299",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "444f0d07": {
+    "id": "444f0d07",
+    "file_path": "frontend/src/components/ChatBox.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:27.819770",
+    "completed_at": "2026-05-16T10:19:33.946157",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "0461b37c": {
+    "id": "0461b37c",
+    "file_path": "frontend/src/components/ChatBox.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:27.866508",
+    "completed_at": "2026-05-16T10:19:36.325767",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": false,
+        "assertions": 7,
+        "failures": [
+          "Collection method without null/undefined guard"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 88 lines, 1 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 1"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "86a0bac1": {
+    "id": "86a0bac1",
+    "file_path": "frontend/src/components/ChatBox.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:27.912851",
+    "completed_at": "2026-05-16T10:19:38.821738",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "55adcd6a": {
+    "id": "55adcd6a",
+    "file_path": "frontend/src/components/CliHarness.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:27.959734",
+    "completed_at": "2026-05-16T10:19:31.692424",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "057ebb61": {
+    "id": "057ebb61",
+    "file_path": "frontend/src/components/CliHarness.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:28.007283",
+    "completed_at": "2026-05-16T10:19:34.035423",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "a5fa2d2c": {
+    "id": "a5fa2d2c",
+    "file_path": "frontend/src/components/CliHarness.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:28.054483",
+    "completed_at": "2026-05-16T10:19:36.416422",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 383 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 3"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "3f4cc73a": {
+    "id": "3f4cc73a",
+    "file_path": "frontend/src/components/CliHarness.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:28.109832",
+    "completed_at": "2026-05-16T10:19:38.913163",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "15d28f39": {
+    "id": "15d28f39",
+    "file_path": "frontend/src/components/EdgeTelemetry.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:28.156600",
+    "completed_at": "2026-05-16T10:19:31.780539",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "d2cd637c": {
+    "id": "d2cd637c",
+    "file_path": "frontend/src/components/EdgeTelemetry.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:28.204000",
+    "completed_at": "2026-05-16T10:19:34.131710",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "cfc5556e": {
+    "id": "cfc5556e",
+    "file_path": "frontend/src/components/EdgeTelemetry.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:28.249232",
+    "completed_at": "2026-05-16T10:19:36.511507",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 68 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "90d48cd4": {
+    "id": "90d48cd4",
+    "file_path": "frontend/src/components/EdgeTelemetry.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:28.296672",
+    "completed_at": "2026-05-16T10:19:39.006973",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "e6fdccbb": {
+    "id": "e6fdccbb",
+    "file_path": "frontend/src/components/Experience3D.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:28.345387",
+    "completed_at": "2026-05-16T10:19:31.868738",
+    "result": {
+      "findings": [
+        {
+          "line": 1,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Wildcard import \u2014 pollutes namespace",
+          "suggestion": "Import specific names",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "frontend/src/components/Experience3D.tsx"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "ffc92d05": {
+    "id": "ffc92d05",
+    "file_path": "frontend/src/components/Experience3D.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:28.405672",
+    "completed_at": "2026-05-16T10:19:34.221314",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "fee8d6e4": {
+    "id": "fee8d6e4",
+    "file_path": "frontend/src/components/Experience3D.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:28.454377",
+    "completed_at": "2026-05-16T10:19:36.599590",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 78 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 1"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "94d5549f": {
+    "id": "94d5549f",
+    "file_path": "frontend/src/components/Experience3D.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:28.503519",
+    "completed_at": "2026-05-16T10:19:39.092944",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "def0a85a": {
+    "id": "def0a85a",
+    "file_path": "frontend/src/edges/TelemetryEdge.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:28.550918",
+    "completed_at": "2026-05-16T10:19:31.966648",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "8d0fcfd6": {
+    "id": "8d0fcfd6",
+    "file_path": "frontend/src/edges/TelemetryEdge.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:28.599131",
+    "completed_at": "2026-05-16T10:19:34.310631",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "45af7dfd": {
+    "id": "45af7dfd",
+    "file_path": "frontend/src/edges/TelemetryEdge.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:28.644878",
+    "completed_at": "2026-05-16T10:19:36.687937",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 97 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "644a6d06": {
+    "id": "644a6d06",
+    "file_path": "frontend/src/edges/TelemetryEdge.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:28.693062",
+    "completed_at": "2026-05-16T10:19:39.179374",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "caf58042": {
+    "id": "caf58042",
+    "file_path": "frontend/src/main.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:28.743139",
+    "completed_at": "2026-05-16T10:19:32.054300",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "69917f6c": {
+    "id": "69917f6c",
+    "file_path": "frontend/src/main.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:28.789372",
+    "completed_at": "2026-05-16T10:19:34.409137",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "12be7792": {
+    "id": "12be7792",
+    "file_path": "frontend/src/main.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:28.834912",
+    "completed_at": "2026-05-16T10:19:36.782143",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 11 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Large module with no exports \u2014 dead code or missing API"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "cb4a840e": {
+    "id": "cb4a840e",
+    "file_path": "frontend/src/main.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:28.883629",
+    "completed_at": "2026-05-16T10:19:39.271074",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "a32cc333": {
+    "id": "a32cc333",
+    "file_path": "frontend/src/nodes/AgentNode.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:28.930574",
+    "completed_at": "2026-05-16T10:19:32.143974",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "7bd129b2": {
+    "id": "7bd129b2",
+    "file_path": "frontend/src/nodes/AgentNode.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:28.978209",
+    "completed_at": "2026-05-16T10:19:34.501604",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "72429343": {
+    "id": "72429343",
+    "file_path": "frontend/src/nodes/AgentNode.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:29.033120",
+    "completed_at": "2026-05-16T10:19:36.873071",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": false,
+        "assertions": 7,
+        "failures": [
+          "Collection method without null/undefined guard"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 173 lines, 1 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "11aa237d": {
+    "id": "11aa237d",
+    "file_path": "frontend/src/nodes/AgentNode.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:29.081282",
+    "completed_at": "2026-05-16T10:19:39.360824",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "b2880785": {
+    "id": "b2880785",
+    "file_path": "frontend/src/nodes/MemoryNode.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:29.129922",
+    "completed_at": "2026-05-16T10:19:32.232324",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "c6c4327f": {
+    "id": "c6c4327f",
+    "file_path": "frontend/src/nodes/MemoryNode.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:29.176160",
+    "completed_at": "2026-05-16T10:19:34.593531",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "fb5ceca4": {
+    "id": "fb5ceca4",
+    "file_path": "frontend/src/nodes/MemoryNode.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:29.223887",
+    "completed_at": "2026-05-16T10:19:36.959820",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 111 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "cd92fb62": {
+    "id": "cd92fb62",
+    "file_path": "frontend/src/nodes/MemoryNode.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:29.269939",
+    "completed_at": "2026-05-16T10:19:39.449152",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "f9f69ff0": {
+    "id": "f9f69ff0",
+    "file_path": "frontend/src/nodes/OrchestratorNode.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:29.325170",
+    "completed_at": "2026-05-16T10:19:32.327816",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "41dbbc35": {
+    "id": "41dbbc35",
+    "file_path": "frontend/src/nodes/OrchestratorNode.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:29.390341",
+    "completed_at": "2026-05-16T10:19:34.693848",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "fd08775d": {
+    "id": "fd08775d",
+    "file_path": "frontend/src/nodes/OrchestratorNode.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:29.440814",
+    "completed_at": "2026-05-16T10:19:37.050396",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": false,
+        "assertions": 7,
+        "failures": [
+          "Collection method without null/undefined guard"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 114 lines, 1 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "43530773": {
+    "id": "43530773",
+    "file_path": "frontend/src/nodes/OrchestratorNode.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:29.489441",
+    "completed_at": "2026-05-16T10:19:39.535435",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "c50044eb": {
+    "id": "c50044eb",
+    "file_path": "frontend/src/nodes/SystemGuardianNode.tsx",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:29.541172",
+    "completed_at": "2026-05-16T10:19:32.417975",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "be47bc76": {
+    "id": "be47bc76",
+    "file_path": "frontend/src/nodes/SystemGuardianNode.tsx",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:29.591581",
+    "completed_at": "2026-05-16T10:19:34.783519",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "f1741252": {
+    "id": "f1741252",
+    "file_path": "frontend/src/nodes/SystemGuardianNode.tsx",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:29.637393",
+    "completed_at": "2026-05-16T10:19:37.138595",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 229 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 1 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "772cbd0d": {
+    "id": "772cbd0d",
+    "file_path": "frontend/src/nodes/SystemGuardianNode.tsx",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:29.688293",
+    "completed_at": "2026-05-16T10:19:39.626358",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "d782bbe6": {
+    "id": "d782bbe6",
+    "file_path": "frontend/src/store/agentStore.ts",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:29.733313",
+    "completed_at": "2026-05-16T10:19:32.511153",
+    "result": {
+      "findings": [
+        {
+          "line": 1,
+          "severity": "critical",
+          "category": "bug",
+          "message": "Try block without except \u2014 silent failure",
+          "suggestion": "Add except block or remove try",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "frontend/src/store/agentStore.ts"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "04407cc8": {
+    "id": "04407cc8",
+    "file_path": "frontend/src/store/agentStore.ts",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:29.776695",
+    "completed_at": "2026-05-16T10:19:34.876006",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "55d0dd93": {
+    "id": "55d0dd93",
+    "file_path": "frontend/src/store/agentStore.ts",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:29.820012",
+    "completed_at": "2026-05-16T10:19:37.225807",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 421 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": false,
+        "assertions": 6,
+        "failures": [
+          "11 direct instantiations \u2014 consider dependency injection",
+          "Uppercase variable names \u2014 should be camelCase (PascalCase for types only)"
+        ],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 2 concerns",
+          "Complexity score: 4"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Warning: destructive operation without confirmation flow",
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "d1de3572": {
+    "id": "d1de3572",
+    "file_path": "frontend/src/store/agentStore.ts",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:29.863152",
+    "completed_at": "2026-05-16T10:19:39.710216",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "a1fa6ce2": {
+    "id": "a1fa6ce2",
+    "file_path": "frontend/vite.config.ts",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:29.907468",
+    "completed_at": "2026-05-16T10:19:32.606516",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "cc36871f": {
+    "id": "cc36871f",
+    "file_path": "frontend/vite.config.ts",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:29.958158",
+    "completed_at": "2026-05-16T10:19:34.970633",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "c0418f22": {
+    "id": "c0418f22",
+    "file_path": "frontend/vite.config.ts",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:30.001936",
+    "completed_at": "2026-05-16T10:19:37.327300",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 8 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 0"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "fa667a08": {
+    "id": "fa667a08",
+    "file_path": "frontend/vite.config.ts",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:30.045648",
+    "completed_at": "2026-05-16T10:19:39.797392",
+    "result": {
+      "valid": true,
+      "skipped": true
+    },
+    "error": null
+  },
+  "df3c3262": {
+    "id": "df3c3262",
+    "file_path": "twisted-stacks-agentic-team/qdrant/sync/markdown_to_qdrant.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:30.089668",
+    "completed_at": "2026-05-16T10:19:32.698833",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "85954093": {
+    "id": "85954093",
+    "file_path": "twisted-stacks-agentic-team/qdrant/sync/markdown_to_qdrant.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:30.133797",
+    "completed_at": "2026-05-16T10:19:35.061928",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "c6092084": {
+    "id": "c6092084",
+    "file_path": "twisted-stacks-agentic-team/qdrant/sync/markdown_to_qdrant.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:30.178579",
+    "completed_at": "2026-05-16T10:19:37.413571",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 55 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 2"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": true,
+        "assertions": 5,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 0 friction points"
+        ]
+      },
+      "all_passed": true
+    },
+    "error": null
+  },
+  "bd08e5ec": {
+    "id": "bd08e5ec",
+    "file_path": "twisted-stacks-agentic-team/qdrant/sync/markdown_to_qdrant.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:30.229877",
+    "completed_at": "2026-05-16T10:19:39.916211",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "ffec8ab8": {
+    "id": "ffec8ab8",
+    "file_path": "twisted-stacks-agentic-team/system/heartbeat-monitor.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:30.273482",
+    "completed_at": "2026-05-16T10:19:32.798466",
+    "result": {
+      "findings": [],
+      "count": 0
+    },
+    "error": null
+  },
+  "4f5329e0": {
+    "id": "4f5329e0",
+    "file_path": "twisted-stacks-agentic-team/system/heartbeat-monitor.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:30.317253",
+    "completed_at": "2026-05-16T10:19:35.162292",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "07c4706b": {
+    "id": "07c4706b",
+    "file_path": "twisted-stacks-agentic-team/system/heartbeat-monitor.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:30.361897",
+    "completed_at": "2026-05-16T10:19:37.503706",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 142 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 4"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": false,
+        "assertions": 5,
+        "failures": [
+          "Function with multiple params has no defaults \u2014 consider options object"
+        ],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 1 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "f3c8a1f0": {
+    "id": "f3c8a1f0",
+    "file_path": "twisted-stacks-agentic-team/system/heartbeat-monitor.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:30.405807",
+    "completed_at": "2026-05-16T10:19:40.034426",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
+  },
+  "9b0ea9d4": {
+    "id": "9b0ea9d4",
+    "file_path": "twisted-stacks-agentic-team/vectorize_codebase.py",
+    "type": "review",
+    "status": "done",
+    "priority": 10,
+    "created_at": "2026-05-16T10:19:30.451997",
+    "completed_at": "2026-05-16T10:19:32.898617",
+    "result": {
+      "findings": [
+        {
+          "line": 142,
+          "severity": "warning",
+          "category": "maintainability",
+          "message": "Function is 115 lines \u2014 consider splitting",
+          "suggestion": "Extract into smaller focused functions",
+          "auto_fixable": false,
+          "fixed_code": null,
+          "file": "twisted-stacks-agentic-team/vectorize_codebase.py"
+        }
+      ],
+      "count": 1
+    },
+    "error": null
+  },
+  "211127f0": {
+    "id": "211127f0",
+    "file_path": "twisted-stacks-agentic-team/vectorize_codebase.py",
+    "type": "improve",
+    "status": "done",
+    "priority": 9,
+    "created_at": "2026-05-16T10:19:30.497092",
+    "completed_at": "2026-05-16T10:19:35.275176",
+    "result": {
+      "applied": []
+    },
+    "error": null
+  },
+  "2018b00e": {
+    "id": "2018b00e",
+    "file_path": "twisted-stacks-agentic-team/vectorize_codebase.py",
+    "type": "test",
+    "status": "done",
+    "priority": 8,
+    "created_at": "2026-05-16T10:19:30.548389",
+    "completed_at": "2026-05-16T10:19:37.589924",
+    "result": {
+      "debug": {
+        "persona": "debugger",
+        "passed": true,
+        "assertions": 7,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Analyzed 436 lines, 0 potential runtime issues"
+        ]
+      },
+      "senior": {
+        "persona": "senior",
+        "passed": true,
+        "assertions": 6,
+        "failures": [],
+        "coverage": 0,
+        "logs": [
+          "Architectural review: 0 concerns",
+          "Complexity score: 4"
+        ]
+      },
+      "user": {
+        "persona": "user",
+        "passed": false,
+        "assertions": 5,
+        "failures": [
+          "Function with multiple params has no defaults \u2014 consider options object",
+          "Function with multiple params has no defaults \u2014 consider options object",
+          "Function with multiple params has no defaults \u2014 consider options object",
+          "Function with multiple params has no defaults \u2014 consider options object"
+        ],
+        "coverage": 0,
+        "logs": [
+          "UX audit: 4 friction points"
+        ]
+      },
+      "all_passed": false
+    },
+    "error": null
+  },
+  "8285007a": {
+    "id": "8285007a",
+    "file_path": "twisted-stacks-agentic-team/vectorize_codebase.py",
+    "type": "validate",
+    "status": "done",
+    "priority": 7,
+    "created_at": "2026-05-16T10:19:30.592063",
+    "completed_at": "2026-05-16T10:19:40.150989",
+    "result": {
+      "valid": true,
+      "errors": ""
+    },
+    "error": null
   }
 }
