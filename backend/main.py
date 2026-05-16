@@ -7,17 +7,44 @@ import subprocess
 import signal
 import os, json
 import asyncio
+import logging
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger("sami")
+
 load_dotenv()
+
+class AgentTask(BaseModel):
+    agent_id: str
+    task: str
+
+class WorkflowTask(BaseModel):
+    agent_id: str
+    task: str
+
+class WorkflowRequest(BaseModel):
+    tasks: list[WorkflowTask]
+
+class LangGraphRequest(BaseModel):
+    agent_id: str
+    task: str
+    max_turns: int = 10
 
 from free_gateway import FreeGateway
 from agent_orchestrator import AgentOrchestrator, AGENT_DEFS
+from langgraph_engine import LangGraphEngine
 
 gateway = FreeGateway()
 orchestrator = AgentOrchestrator(gateway)
+langgraph_engine = LangGraphEngine(gateway, orchestrator=orchestrator)
+langgraph_engine.compile()
 
 app = FastAPI(title="ANLAGSTAVLAN Agentic API")
 
@@ -241,14 +268,6 @@ async def execute_terminal(cmd: TerminalCommand):
 # ─────────────────────────────────────────────────────────────
 # Agent Execution
 # ─────────────────────────────────────────────────────────────
-class AgentTask(BaseModel):
-    agent_id: str
-    task: str
-    model: str = ""
-
-class WorkflowRequest(BaseModel):
-    tasks: list[AgentTask]
-
 class AgentResponse(BaseModel):
     agent_id: str
     result: str
@@ -312,14 +331,37 @@ async def agent_websocket(ws: WebSocket):
 
 @app.post("/api/agents/execute")
 async def execute_agent(req: AgentTask):
+    logger.info(f"Agent execute: agent_id={req.agent_id}, task={req.task[:50]}...")
     result = await orchestrator.execute(req.agent_id, req.task)
     return result
 
 @app.post("/api/agents/workflow")
 async def execute_workflow(req: WorkflowRequest):
+    logger.info(f"Workflow execute: {len(req.tasks)} tasks")
     tasks = [{"agent_id": t.agent_id, "task": t.task} for t in req.tasks]
     result = await orchestrator.workflow(tasks)
     return result
+
+@app.post("/api/agents/lg/execute")
+async def execute_agent_lg(req: LangGraphRequest):
+    logger.info(f"LangGraph execute: agent_id={req.agent_id}, task={req.task[:50]}..., max_turns={req.max_turns}")
+    result = await langgraph_engine.run(req.agent_id, req.task, max_turns=req.max_turns)
+    return result
+
+class ReviewHarnessRequest(BaseModel):
+    auto_commit: bool = False
+    commit_message: str = ""
+
+@app.post("/api/harness/run")
+async def run_review_harness(req: ReviewHarnessRequest):
+    logger.info(f"Review harness run: auto_commit={req.auto_commit}")
+    from review_harness import AutonomousReviewHarness
+    harness = AutonomousReviewHarness()
+    summary = await harness.run()
+    if req.auto_commit:
+        final = await harness.finalize_and_push(req.commit_message or f"harness: auto-review {summary['tasks_completed']} tasks")
+        summary["commit"] = final
+    return summary
 
 @app.post("/api/agents/stop")
 async def stop_agents():
@@ -335,10 +377,15 @@ async def get_config():
         "gateway": {
             "openrouter": bool(os.getenv("OPENROUTER_API_KEY")),
             "gemini": bool(os.getenv("GEMINI_API_KEY")),
+            "ollama": await gateway._check_ollama(),
         },
         "agents": len(AGENT_DEFS),
         "ws_endpoint": "/api/ws/agents",
     }
+
+@app.get("/api/health/providers")
+async def provider_health():
+    return await gateway.health()
 
 if __name__ == "__main__":
     import uvicorn

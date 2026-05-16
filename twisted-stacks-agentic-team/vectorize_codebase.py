@@ -381,8 +381,7 @@ def extract_generic_chunks(content: str, file_path: Path) -> List[Dict[str, Any]
 
 def process_codebase():
     """Process the entire codebase and create chunks for vectorization"""
-    print("Starting codebase vectorization...")
-    
+    logger.info("Starting codebase vectorization...")
     # Create directories
     EMBEDDINGS_DIR.mkdir(parents=True, exist_ok=True)
     CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
@@ -399,13 +398,12 @@ def process_codebase():
             file_path = Path(root) / file
             
             if should_process_file(file_path):
-                print(f"Processing: {file_path}")
+                logger.info(f"Processing: {file_path}")
                 chunks = extract_semantic_chunks(file_path)
                 all_chunks.extend(chunks)
                 processed_files += 1
     
-    print(f"Processed {processed_files} files, created {len(all_chunks)} chunks")
-    
+    logger.info(f"Processed {processed_files} files, created {len(all_chunks)} chunks")
     # Save chunks to file
     chunks_file = CHUNKS_DIR / "codebase_chunks.json"
     with open(chunks_file, 'w') as f:
@@ -430,9 +428,8 @@ def process_codebase():
     with open(CONFIG_FILE, 'w') as f:
         json.dump(config, f, indent=2)
     
-    print(f"Vectorization complete! Chunks saved to {chunks_file}")
-    print(f"Configuration saved to {CONFIG_FILE}")
-    
+    logger.info(f"Vectorization complete! Chunks saved to {chunks_file}")
+    logger.info(f"Configuration saved to {CONFIG_FILE}")
     return all_chunks
 
 if __name__ == "__main__":

@@ -1,0 +1,31 @@
+name: sami-agent-flow
+description: |
+  Run a SAMI agent task through plan → execute → verify → report stages.
+  Uses deterministic node sequencing with AI prompts and bash validation.
+provider: claude
+model: sonnet
+nodes:
+  - id: think
+    prompt: |
+      You are {{agent_name}} ({{agent_role}}).
+      Task: {{task}}
+      Think through this step by step. What approach will you take?
+    context: fresh
+  - id: execute
+    prompt: |
+      Execute the plan from the previous step.
+      Task: {{task}}
+      Use available tools to accomplish the goal.
+    depends_on: [think]
+    context: fresh
+  - id: verify
+    prompt: |
+      Verify the result against the original task: {{task}}
+      Is the task complete? What was accomplished?
+    depends_on: [execute]
+    context: fresh
+  - id: report
+    prompt: |
+      Summarize: what was accomplished, tools used, and final result.
+    depends_on: [verify]
+    context: fresh

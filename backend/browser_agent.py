@@ -1,17 +1,18 @@
 import asyncio
 import time
 import os
+import logging
+
+logger = logging.getLogger("sami.browser")
 
 try:
     from browser_use import Agent as BrowserAgent
-    from browser_use.browser.session import BrowserSession
+    from browser_use.browser.browser import Browser
     BROWSER_USE_AVAILABLE = True
 except ImportError:
     BrowserAgent = None
-    BrowserSession = None
+    Browser = None
     BROWSER_USE_AVAILABLE = False
-
-_session: BrowserSession | None = None
 
 
 def get_default_llm():
@@ -43,43 +44,30 @@ def get_default_llm():
     return None
 
 
-def get_default_session(headless: bool = True) -> BrowserSession:
-    global _session
-    if _session is None and BrowserSession is not None:
-        _session = BrowserSession(headless=headless)
-    return _session
-
-
-async def close_session():
-    global _session
-    if _session:
-        await _session.close()
-        _session = None
-
-
-async def run_browser_task(task: str, llm=None, max_steps: int = 25) -> dict:
+async def run_browser_task(task: str, llm=None, max_steps: int = 25, headless: bool = True) -> dict:
     if not BROWSER_USE_AVAILABLE:
         return {"success": False, "error": "browser-use not installed. Run: pip install browser-use"}
-
-    session = get_default_session()
-    if session is None:
-        return {"success": False, "error": "Failed to create browser session"}
 
     if llm is None:
         llm = get_default_llm()
     if llm is None:
         return {"success": False, "error": "No LLM available. Install an Ollama model (ollama pull llama3.2:3b) or set OPENROUTER_API_KEY or GEMINI_API_KEY"}
 
+    browser = None
     start = time.time()
-    agent = BrowserAgent(
-        task=task,
-        llm=llm,
-        browser_session=session,
-        use_vision=True,
-        max_actions_per_step=5,
-    )
 
     try:
+        if Browser is not None:
+            browser = Browser(headless=headless)
+
+        agent = BrowserAgent(
+            task=task,
+            llm=llm,
+            browser=browser,
+            use_vision=True,
+            max_actions_per_step=5,
+        )
+
         history = await agent.run(max_steps=max_steps)
         elapsed = time.time() - start
         final_result = history.final_result() if hasattr(history, 'final_result') else str(history)
@@ -91,10 +79,17 @@ async def run_browser_task(task: str, llm=None, max_steps: int = 25) -> dict:
             "elapsed_seconds": round(elapsed, 2),
         }
     except Exception as e:
+        logger.error(f"Browser task failed: {e}")
         return {
             "success": False,
             "error": f"{type(e).__name__}: {str(e)[:500]}",
         }
+    finally:
+        if browser:
+            try:
+                await browser.close()
+            except Exception:
+                pass
 
 
 def run_browser_task_sync(task: str, max_steps: int = 25) -> dict:

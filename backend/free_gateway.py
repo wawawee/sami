@@ -33,6 +33,28 @@ class FreeGateway:
         self.gemini_key = os.getenv("GEMINI_API_KEY", "")
         self._client = httpx.AsyncClient(timeout=60)
         self._rate_limits = {"openrouter": {"remaining": 50, "reset": time.time() + 86400}}
+        self._ollama_available = None
+
+    async def health(self) -> dict:
+        """Check health of all providers."""
+        health = {
+            "openrouter": bool(self.openrouter_key),
+            "gemini": bool(self.gemini_key),
+            "ollama": await self._check_ollama(),
+        }
+        return health
+
+    async def _check_ollama(self) -> bool:
+        """Check if Ollama is running and accessible."""
+        if self._ollama_available is not None:
+            return self._ollama_available
+        try:
+            resp = await self._client.get(f"{OLLAMA_BASE}/api/tags", timeout=5)
+            self._ollama_available = resp.status_code == 200
+            return self._ollama_available
+        except Exception:
+            self._ollama_available = False
+            return False
 
     async def chat(self, model: str, messages: list[dict],agent_context: Optional[dict] = None, tools: Optional[list] = None) -> dict:
         errors = []

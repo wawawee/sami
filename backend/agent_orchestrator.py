@@ -15,6 +15,7 @@ CRITICAL: You MUST use tools when asked to do something involving browsers, file
 
 Available tools:
 - browser_use: Control a web browser — navigate, click, type, extract data. Args: {"task": "natural language description of what to do"}
+- archon_workflow: Run deterministic YAML-coded workflow for coding tasks. Args: {"workflow": "workflow name", "task": "task description"}
 - web_search: Search the web for current information. Args: {"query": "search query"}
 - read_file: Read a file from the project. Args: {"path": "filepath"}
 - write_file: Write content to a file. Args: {"path": "filepath", "content": "file content"}
@@ -112,6 +113,22 @@ TOOLS = [
             "parameters": {"type": "object", "properties": {"task": {"type": "string", "description": "Natural language description of what to do in the browser"}}, "required": ["task"]},
         },
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "archon_workflow",
+            "description": "Run a deterministic Archon workflow for coding tasks: code review, bug fixing, refactoring, PR creation. Uses YAML-defined workflows with AI + bash + validation nodes.",
+            "parameters": {"type": "object", "properties": {"workflow": {"type": "string", "description": "Workflow name: sami-agent-flow, sami-code-review, or any Archon workflow"}, "task": {"type": "string", "description": "Task description for the workflow"}}, "required": ["workflow", "task"]},
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "review_harness",
+            "description": "Run autonomous code review across the entire codebase. Three personas (debug, senior dev, user) analyze for bugs, security, performance, and UX. Auto-fixes safe issues, logs everything, and can commit+push.",
+            "parameters": {"type": "object", "properties": {"auto_commit": {"type": "boolean", "description": "Whether to auto-commit and push findings (default: false)"}, "commit_message": {"type": "string", "description": "Custom commit message if auto_commit is true"}}},
+        },
+    },
 ]
 
 type EventCallback = Callable[[dict], None]
@@ -133,7 +150,7 @@ class AgentOrchestrator:
             except Exception:
                 pass
 
-    async def execute(self, agent_id: str, task: str) -> dict:
+    async def execute(self, agent_id: str, task: str, max_turns: int = 6) -> dict:
         self._running = True
         agent = AGENT_DEFS.get(agent_id)
         if not agent:
@@ -147,7 +164,6 @@ class AgentOrchestrator:
             {"role": "user", "content": task},
         ]
 
-        max_turns = 6
         turn = 0
         result = ""
 
@@ -256,6 +272,26 @@ class AgentOrchestrator:
                 self._emit({"type": "tool_call", "agent_id": agent_id, "tool": "browser_use", "args": args})
                 result = await run_browser_task(args.get("task", ""), max_steps=15)
                 return json.dumps(result)[:2000]
+
+            elif tool == "archon_workflow":
+                from archon_integration import run_workflow
+                workflow = args.get("workflow", "sami-agent-flow")
+                task = args.get("task", "")
+                self._emit({"type": "tool_call", "agent_id": agent_id, "tool": "archon_workflow", "args": args})
+                result = await run_workflow(workflow, task)
+                return json.dumps(result)[:2000]
+
+            elif tool == "review_harness":
+                from review_harness import AutonomousReviewHarness
+                auto_commit = args.get("auto_commit", False)
+                commit_msg = args.get("commit_message", "")
+                self._emit({"type": "tool_call", "agent_id": agent_id, "tool": "review_harness", "args": args})
+                harness = AutonomousReviewHarness()
+                summary = await harness.run()
+                if auto_commit:
+                    final = await harness.finalize_and_push(commit_msg or f"harness: auto-review {summary['tasks_completed']} tasks")
+                    summary["commit"] = final
+                return json.dumps(summary)[:2000]
 
             else:
                 return f"[unknown tool: {tool}]"

@@ -47,10 +47,9 @@ class MemorySync:
                 )
             ]
         )
-        print(f"Indexed {file_path} for {agent_id}")
-
+        logger.info(f"Indexed {file_path} for {agent_id}")
 if __name__ == "__main__":
     # Example usage
     sync = MemorySync()
     # sync.ensure_collection()
-    print("MemorySync initialized. Ready to vectorize Markdown.")
+    logger.info("MemorySync initialized. Ready to vectorize Markdown.")

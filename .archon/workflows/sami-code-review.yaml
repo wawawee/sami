@@ -1,0 +1,33 @@
+name: sami-code-review
+description: |
+  Review code changes with automated lint checks and AI analysis.
+  Runs tsc type-check then AI review, outputs summary report.
+provider: claude
+model: sonnet
+nodes:
+  - id: lint-check
+    bash: "cd {{cwd}} && npx tsc --noEmit 2>&1 || echo 'TSC_EXIT:$?'"
+    timeout: 30000
+  - id: review
+    prompt: |
+      Review the code in this project for:
+      1. Bugs and logic errors
+      2. Security vulnerabilities
+      3. Code quality and style
+      4. Missing error handling
+
+      Lint results:
+      $lint-check.output
+
+      Focus on actionable issues with specific line references.
+    depends_on: [lint-check]
+    context: fresh
+  - id: summary
+    prompt: |
+      Produce a concise review summary with:
+      - Critical issues (must fix)
+      - Warnings (should fix)
+      - Suggestions (nice to have)
+      - Lint status
+    depends_on: [review]
+    context: fresh
