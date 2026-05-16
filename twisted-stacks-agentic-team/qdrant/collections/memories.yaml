@@ -1,0 +1,19 @@
+# Semantisk minnes-collection för alla agenter
+collection_name: team_memories
+vectors:
+  size: 1536              # OpenAI embedding dimension (standard)
+  distance: Cosine        # Likhetsmått
+  on_disk: true          # Spara på disk för stora dataset
+
+# Payload-schema för metadata
+payload_schema:
+  agent_id:               # Vilken agent äger minnet
+    type: keyword
+  memory_type:            # Typ av minne [episodic, semantic, procedural]
+    type: keyword
+  context_id:             # Tillhörande kontext
+    type: keyword
+  timestamp:
+    type: datetime
+  source_file:            # Länk till markdown-källa
+    type: text
