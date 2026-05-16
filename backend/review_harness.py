@@ -264,6 +264,10 @@ class ReviewAgent:
             if severity is None:
                 continue
             for i, line in enumerate(lines):
+                stripped = line.strip()
+                # Skip pure comment lines (except TODO/FIXME pattern which targets comments)
+                if stripped.startswith("#") and "TODO" not in pattern and "FIXME" not in pattern:
+                    continue
                 if re.search(pattern, line):
                     # Skip comments that allow the pattern
                     if "# allow-" in line.lower() or "# noqa" in line.lower():
@@ -274,7 +278,11 @@ class ReviewAgent:
                     ))
 
         # Structural analysis
-        if "try:" in source and "except" not in source:
+        ext = Path(file_path).suffix
+        is_python = ext in ('.py',)
+        is_js_ts = ext in ('.js', '.jsx', '.ts', '.tsx')
+
+        if is_python and "try:" in source and "except" not in source:
             findings.append(ReviewFinding(
                 line=1, severity="critical", category="bug",
                 message="Try block without except — silent failure",
@@ -282,18 +290,39 @@ class ReviewAgent:
                 file=file_path,
             ))
 
+        if is_js_ts and "try {" in source and ".catch(" not in source and "catch " not in source and "catch{" not in source:
+            findings.append(ReviewFinding(
+                line=1, severity="critical", category="bug",
+                message="Try block without catch — unhandled rejection",
+                suggestion="Add catch block or use Promise.catch()",
+                file=file_path,
+            ))
+
         # Long function detection
-        func_starts = [(i, line) for i, line in enumerate(lines) if re.match(r'\s*def\s+\w+', line)]
-        for idx, (start, _) in enumerate(func_starts):
-            end = func_starts[idx + 1][0] if idx + 1 < len(func_starts) else len(lines)
-            func_len = end - start
-            if func_len > 80:
-                findings.append(ReviewFinding(
-                    line=start + 1, severity="warning", category="maintainability",
-                    message=f"Function is {func_len} lines — consider splitting",
-                    suggestion="Extract into smaller focused functions",
-                    file=file_path,
-                ))
+        if is_python:
+            func_starts = [(i, line) for i, line in enumerate(lines) if re.match(r'\s*def\s+\w+', line)]
+            for idx, (start, _) in enumerate(func_starts):
+                end = func_starts[idx + 1][0] if idx + 1 < len(func_starts) else len(lines)
+                func_len = end - start
+                if func_len > 80:
+                    findings.append(ReviewFinding(
+                        line=start + 1, severity="warning", category="maintainability",
+                        message=f"Function is {func_len} lines — consider splitting",
+                        suggestion="Extract into smaller focused functions",
+                        file=file_path,
+                    ))
+        elif is_js_ts:
+            func_starts = [(i, line) for i, line in enumerate(lines) if re.match(r'\s*(async\s+)?function\s+\w+|const\s+\w+\s*=\s*(async\s+)?\(', line)]
+            for idx, (start, _) in enumerate(func_starts):
+                end = func_starts[idx + 1][0] if idx + 1 < len(func_starts) else len(lines)
+                func_len = end - start
+                if func_len > 80:
+                    findings.append(ReviewFinding(
+                        line=start + 1, severity="warning", category="maintainability",
+                        message=f"Function is {func_len} lines — consider splitting",
+                        suggestion="Extract into smaller focused functions",
+                        file=file_path,
+                    ))
 
         # Import analysis
         if "import *" in source:
